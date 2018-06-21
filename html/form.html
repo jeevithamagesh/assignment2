@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Karnataka Bank</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <body>
+        <div class="topnav">
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="ScrollStyle">
+                        <form id="myform">
+
+
+                            <div class="container1">
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label><b>Username</b></label>
+
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="Enter Name" id="name" onblur="user()"><span id="first">
+                                            </span><br/>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label><b>Email</b></label>
+
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="Enter Email" id="email" onblur="myfunction()"><span id="Message3"></span>
+                                        <br>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label><b>Confirm Email</b></label>
+
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="Enter Email" id="confirmemail" onblur="confirm()"><span id="message"></span><br>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label><b>Phone Number</b></label>
+
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="Enter Phone Number" name="phone number" id="mobilenumber" onblur="mobile()"><span id="messages"></span><br>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label><b>Location</b></label>
+
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="Enter Location" name="location" id="loct">
+
+                                        <span class="loc">
+                                           
+                                            <i class="material-icons" id="GET" onclick="getData()">edit_location</i>
+                                        </span>
+
+
+
+
+
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row ">
+                                    <div class="col-25 ">
+                                        <label><b>D.O.B</b></label>
+
+                                    </div>
+                                    <div>
+                                        <input type="date" placeholder="Enter D.O.B " name="D.O.B " id="dob" onblur="agecount() "><span id="dob1"></span><br>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label><b>Age</b></label>
+
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="Enter Age" name="age" id="age" onblur="agecount() "><br>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label><b>Password</b></label>
+
+                                    </div>
+                                    <div>
+                                        <input type="password" placeholder="Enter Password" id="password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least
+                                        8 or more characters" onblur="password()">
+                                        <span id="msgpsw"></span><br>
+
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label><b>Confirm Password</b></label>
+
+                                    </div>
+                                    <div>
+                                        <input type="password" placeholder="Enter Password" name="confirm psw" id="password2" onblur="confirmpassword()"><span id="msgcpsw"></span><br>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                            <input type="button" class="btn2" value="RESET" onclick="reset()">
+                            <input type="button" class="btn4" onclick="fetch()" value="FETCH">
+                            <button class="btn3" onclick="accept()">SUBMIT</button>
+
+
+
+
+                    </div>
+
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="menu-icon" id="openform">
+            <img src="../resources/menubtn.png" class="menuimage3">
+
+        </div>
+
+        <div class="container ">
+
+            <div class="nav">
+                <header>
+                    <h1 class="text1 ">karnataka bank</h1>
+
+                    <div class="icons ">
+
+                        <ul>
+                            <span class="bankicon ">
+                                <img src="https://image.ibb.co/b6HdLy/karnataka_bank_logo.png ">
+                            </span>
+                            <li>
+                                <img src="https://image.ibb.co/eLhTLy/branch_atm_image.png ">
+                            </li>
+                            <li>
+                                Branch & Atm
+                            </li>
+                            <li>
+                                <img src="https://image.ibb.co/mEcynd/internet_banking_image.png ">
+                            </li>
+                            <li>
+
+                                <button id="myBtn">Internet Banking</button>
+                            </li>
+                            <li>
+                                <img src="https://image.ibb.co/bXVeAy/search_icon.png ">
+                            </li>
+                            <li>
+                                Search
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                </header>
+            </div>
+
+
+
+
+            <div class="slideshow-container ">
+                <div class="mySlides fade " id="slide1 ">
+
+                    <img src="https://preview.ibb.co/kgycxd/slider1.jpg " style="width:100% ">
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+        </div>
+        <div class="lefttextbox">
+            <span>L</span>
+            <span>A</span>
+            <span>T</span>
+            <span>E</span>
+            <span>S</span>
+            <span>T</span>
+            <span>N</span>
+            <span>E</span>
+            <span>w</span>
+            <span>S</span>
+        </div>
+        <div class="righttextbox">
+            <img src="../resources/mobile.png " class=" cell mobile">
+            <img src="../resources/procent-badge.png " class="procent mobile">
+            <img src="../resources/ratecalculator.png " class="ratecalculator mobile">
+            <img src="../resources/deposit-icon.png " class="deposit mobile">
+            <img src="../resources/service.jpg " class="service mobile">
+            <img src="../resources/percentageicon.png " class="percentageicon mobile">
+
+
+
+        </div>
+        <script src="../js/script.js"></script>
+    </body>
+</head>
